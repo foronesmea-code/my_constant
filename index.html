@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, My Always</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Vintage Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ambient Background Lighting -->
+  <div class="ambient-glow"></div>
+
+  <!-- Lock Screen Screen overlay -->
+  <div class="lock-screen" id="lock-screen">
+    <div class="lock-box">
+      <div class="lock-icon">🔒</div>
+      <h2>UNTOLD HEARTS</h2>
+      <p>Enter our special date to unlock this book:</p>
+      
+      <form id="password-form">
+        <input 
+          type="password" 
+          id="pass-input" 
+          placeholder="Enter number..." 
+          maxlength="2" 
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="unlock-btn">Unlock ✨</button>
+      </form>
+      <p class="error-msg" id="error-msg">Incorrect date. Try again 🤍</p>
+    </div>
+  </div>
+
+  <!-- Book Wrapper (Hidden initially until unlocked) -->
+  <div class="book-container hidden" id="book-container">
+    <div class="book" id="book">
+      
+      <!-- Cover Page -->
+      <div class="page cover front-cover active" id="page-0">
+        <div class="cover-content">
+          <p class="subtitle">A Journey Through Memories</p>
+          <h1>Happy Birthday Baby!</h1>
+          <div class="monogram">🤍</div>
+          <p class="tap-hint">Tap or click to open the book</p>
+        </div>
+      </div>
+
+      <!-- Page 1 -->
+      <div class="page" id="page-1">
+        <div class="page-content">
+          <span class="decor-corner top-left">❧</span>
+          <span class="decor-corner top-right">❧</span>
+          <p class="sentence">as today rolled around, i found myself quietly looking back at the "old us," thinking about everything we shared.</p>
+          <p class="sentence">i couldn’t let the day pass without reaching out to wish you a gentle and beautiful birthday.</p>
+          <span class="page-number">1</span>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="page" id="page-2">
+        <div class="page-content">
+          <span class="decor-corner top-left">❧</span>
+          <span class="decor-corner top-right">❧</span>
+          <p class="sentence">if i’m being completely honest, there’s a quiet sadness in admitting how much i still miss us sometimes.</p>
+          <p class="sentence">i miss the simple, effortless way we used to be, the late night conversations, the shared laughter, and just having you close.</p>
+          <span class="page-number">2</span>
+        </div>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="page" id="page-3">
+        <div class="page-content">
+          <span class="decor-corner top-left">❧</span>
+          <span class="decor-corner top-right">❧</span>
+          <p class="sentence">time keeps moving forward, but there are days when a song, or today’s date brings all those memories rushing back.</p>
+          <p class="sentence">my heart aches a little for what we shared, and looking back, it hurts a bit knowing i wasn't perfect.</p>
+          <span class="page-number">3</span>
+        </div>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="page" id="page-4">
+        <div class="page-content">
+          <span class="decor-corner top-left">❧</span>
+          <span class="decor-corner top-right">❧</span>
+          <p class="sentence">i’m truly sorry for the times i fell short or messed up while we were together.</p>
+          <p class="sentence">but please know that despite my flaws, my heart was always completely yours.</p>
+          <span class="page-number">4</span>
+        </div>
+      </div>
+
+      <!-- Page 5 -->
+      <div class="page" id="page-5">
+        <div class="page-content">
+          <span class="decor-corner top-left">❧</span>
+          <span class="decor-corner top-right">❧</span>
+          <p class="sentence">i poured everything i had into us and tried my absolute best to give you all the love, effort, and care you deserved.</p>
+          <p class="sentence">loving you was the most natural thing in the world to me, and no matter where life takes us, a piece of my heart will always belong to you.</p>
+          <span class="page-number">5</span>
+        </div>
+      </div>
+
+      <!-- Page 6 (Final Special Page) -->
+      <div class="page" id="page-6">
+        <div class="page-content final-page">
+          <span class="decor-corner top-left">❧</span>
+          <span class="decor-corner top-right">❧</span>
+          <p class="sentence highlight-text">you were my person, and no matter what, you will always be my baby.</p>
+          <p class="sentence">i genuinely hope life is being kind to you and that this new year brings you deep peace, warmth, and genuine happiness. HAPPY BIRTHDAY MY BABY LOVE LOVE! ❤️</p>
+          <span class="page-number">6</span>
+        </div>
+      </div>
+
+      <!-- Back Cover -->
+      <div class="page cover back-cover" id="page-7">
+        <div class="cover-content">
+          <p class="end-text">Forever in my heart.</p>
+          <button id="restart-btn">Read Again ✨</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="controls hidden" id="controls">
+    <button id="prev-btn" disabled>← Previous</button>
+    <button id="next-btn">Next Page →</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
